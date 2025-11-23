@@ -1,3 +1,6 @@
+
+import javax.naming.spi.DirStateFactory;
+
 public class MyString {
     public static void main(String[] args) {
         System.out.println("Testing lowercase:");
@@ -18,13 +21,69 @@ public class MyString {
 
     /** Returns the lowercase version of the given string. */
     public static String lowerCase(String str) {
-        // Replace the following statement with your code
-        return null;
+        int sum = 0;
+        String lowString="";
+        for (int i=0; i<str.length();i++)
+        {
+            
+            char tempc= str.charAt(i);
+            if (tempc >= 'A' && tempc <= 'Z' ){
+            sum = tempc +32;
+            char lowerCase = (char)(sum);
+            lowString = lowString + lowerCase;}
+            else 
+            {lowString = lowString + tempc; }
+
+
+        }
+        return lowString;
     }
 
     /** If str1 contains str2, returns true; otherwise returns false. */
     public static boolean contains(String str1, String str2) {
-        // Replace the following statement with your code
+
+        
+    
+    int n = str1.length(); 
+    int m = str2.length(); 
+
+    
+    if (m > n) {
         return false;
+    }
+    
+  
+    if (m == 0) {
+        return false;
+    }
+
+   
+    for (int i = 0; i <= n - m; i++) {
+        
+        
+        boolean matchFound = true; 
+        
+      
+        for (int j = 0; j < m; j++) {
+            
+        
+            if (str1.charAt(i + j) != str2.charAt(j)) {
+                
+              
+                matchFound = false;
+              
+                break; 
+            }
+        }
+        
+   
+        if (matchFound==true) {
+        
+            return true;
+        }
+    }
+    
+  
+    return false;
     }
 }
