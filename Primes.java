@@ -39,7 +39,8 @@ for (int i = 2; i <= n; i++) {
 }
 
 
-         double percentage = (double)primeCount / (n - 1) * 100; 
+        
+         double percentage = (double)primeCount / n * 100; 
          System.out.print("There are " + primeCount + " primes between 2 and " + n +". (" + (int)percentage + "% are primes)"); 
 
          
