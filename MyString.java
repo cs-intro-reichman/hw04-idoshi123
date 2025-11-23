@@ -49,6 +49,10 @@ public class MyString {
     int n = str1.length(); 
     int m = str2.length(); 
 
+    if (m == 0) {
+    return true; 
+}
+
     
     if (m > n) {
         return false;
